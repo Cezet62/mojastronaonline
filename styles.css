@@ -1548,7 +1548,7 @@ a.template-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Center vertically */
+    gap: 8px;
     margin-bottom: var(--space-lg);
     min-height: 32px;
 }

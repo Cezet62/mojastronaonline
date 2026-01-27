@@ -512,6 +512,7 @@ const lightboxCaption = document.getElementById('lightbox-caption');
 
 // Click handlers for template cards
 document.querySelectorAll('.template-card').forEach(card => {
+    if (card.tagName === 'A') return; // skip cards that are links to demo
     card.addEventListener('click', () => {
         const img = card.querySelector('.template-image');
         const title = card.querySelector('h3').textContent;
