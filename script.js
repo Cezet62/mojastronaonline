@@ -546,3 +546,49 @@ document.addEventListener('keydown', (e) => {
         closeLightbox();
     }
 });
+
+// ============================================
+// LEGAL MODALS (Regulamin, Polityka Prywatności)
+// ============================================
+
+const legalModals = {
+    privacy: document.getElementById('modal-privacy'),
+    terms: document.getElementById('modal-terms')
+};
+
+// Open modal
+document.querySelectorAll('[data-modal]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const modalId = link.dataset.modal;
+        const modal = legalModals[modalId];
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Close modal function
+function closeLegalModal(modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close on X button or overlay click
+document.querySelectorAll('.legal-modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('legal-modal-close')) {
+            closeLegalModal(modal);
+        }
+    });
+});
+
+// Close on ESC key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.legal-modal.active').forEach(modal => {
+            closeLegalModal(modal);
+        });
+    }
+});
