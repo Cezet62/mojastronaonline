@@ -592,3 +592,26 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+
+// ============================================
+// COOKIE BANNER
+// ============================================
+
+const cookieBanner = document.getElementById('cookie-banner');
+const cookieAccept = document.getElementById('cookie-accept');
+
+// Check if user already accepted cookies
+if (cookieBanner && !localStorage.getItem('cookiesAccepted')) {
+    // Show banner after short delay
+    setTimeout(() => {
+        cookieBanner.classList.add('active');
+    }, 1000);
+}
+
+// Accept cookies
+if (cookieAccept) {
+    cookieAccept.addEventListener('click', () => {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieBanner.classList.remove('active');
+    });
+}
