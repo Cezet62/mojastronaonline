@@ -709,17 +709,16 @@
         <div class="container">
             <div class="cta-content">
                 <h2 class="cta-title">Porozmawiajmy o <span class="highlight">Twoim projekcie</span></h2>
-                <p class="cta-subtitle">Wybierz dogodny termin w kalendarzu poniżej. To niezobowiązująca, 15-minutowa
-                    rozmowa.</p>
+                <p class="cta-subtitle">Umów się na niezobowiązującą, 15-minutową rozmowę.<br>Dowiesz się, jak mogę pomóc Twojej firmie.</p>
 
-                <!-- Calendly Embed -->
-                <div class="calendly-wrapper">
-                    <div class="calendly-inline-widget"
-                        data-url="https://calendly.com/ziarkowskicezary?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=d4af37"
-                        style="min-width:320px;height:700px;"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"
-                        async></script>
+                <!-- Calendly Popup Button -->
+                <div class="cta-main-button">
+                    <button onclick="Calendly.initPopupWidget({url: 'https://calendly.com/ziarkowskicezary?hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=d4af37'});return false;" class="btn btn-primary btn-large">
+                        📅 Umów bezpłatną rozmowę
+                    </button>
                 </div>
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
                 <div class="cta-alternatives">
                     <p>Wolisz tradycyjny kontakt?</p>

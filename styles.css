@@ -2340,6 +2340,16 @@ a.template-card {
     margin-right: auto;
 }
 
+.cta-main-button {
+    margin: var(--space-xl) 0 var(--space-2xl);
+}
+
+.btn-large {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+    border-radius: var(--radius-lg);
+}
+
 .calendly-wrapper {
     margin-bottom: var(--space-3xl);
     border-radius: var(--radius-lg);
